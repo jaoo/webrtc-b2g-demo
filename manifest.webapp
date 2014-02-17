@@ -1,0 +1,22 @@
+{
+  "name": "WebRTC B2G demo",
+  "description": "Just another WebRTC demo app",
+  "type": "certified",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "locales": {
+    "en-US": {
+      "name": "WebRTC B2G demo",
+      "description": "Just another WebRTC demo app"
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": "default",
+  "permissions": {
+    "audio-capture": {},
+    "video-capture": {}
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta charset="utf-8">
+    <title>WebRTC B2G demo</title>
+
+    <!-- Localization -->
+    <script defer src="shared/js/l10n.js"></script>
+    <link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" type="text/css" href="shared/style/confirm.css" >
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css" >
+    <link rel="stylesheet" type="text/css" href="shared/style/status.css">
+
+    <!-- Specific styles -->
+    <link rel="stylesheet" type="text/css" href="style/webrtc_b2g_demo.css">
+
+    <!-- Specific code -->
+    <script defer src="js/ext/firebase.js"></script>
+    <script defer src="js/firebase_proxy.js"></script>
+    <script defer src="js/webrtc_b2g_demo.js"></script>
+  </head>
+
+  <body role="application">
+    <section role="region">
+      <header>
+	<button id="close"><span class="icon icon-close" data-l10n-id="close"> close </span></button>
+        <menu type="toolbar">
+          <button id="accept" data-l10n-id="accept" class="full recommend">Accept</button>
+        </menu>
+	<h1 id="title" data-l10n-id="title">WebRTC B2G demo</h1>
+      </header>
+
+      <!-- Room request screen -->
+      <article id="room-screen" role="main">
+        <section class="container" role="region">
+          <div class="message">
+            <p data-l10n-id="room-screen-title">Room for WebRTC B2G demo</p>
+            <input type="text" data-l10n-id="room-screen-room" placeholder="ROOM" required="">
+            <p id="room-screen-help" data-l10n-id="room-screen-help">Introduce the room id if you have one, click on 'Accept' to continue. Otherwise, just click on 'Accept' to continue as well.</p>
+          </section>
+        </section>
+      </article>
+
+      <!-- Audio control screen -->
+      <article id="audio-screen" role="main" hidden>
+	<audio id="local-audio" hidden></audio>
+	<audio id="remote-audio" hidden></audio>
+        <video id="local-video" hidden></video>
+        <video id="remote-video" hidden></video>
+      </article>
+    </section>
+  </body>
+</html>
